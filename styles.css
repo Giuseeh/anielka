@@ -1507,7 +1507,7 @@ body {
   box-shadow: 0 14px 32px rgba(159, 45, 66, 0.15);
 }
 .jigsaw-tile {
-  background-image: url('img/hugging.jpg');
+  background-image: url('hugging.jpg');
   background-size: 300% 300%;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
