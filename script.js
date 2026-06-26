@@ -966,13 +966,13 @@ function renderMaze() {
       const isGoal = x === size - 1 && y === size - 1;
 
       if (mazeComplete && isPlayer && isGoal) {
-        cell.appendChild(createCatSprite('gif/cat1.gif', 'Peppe and Aniela together', 'cat-joined'));
+        cell.appendChild(createCatSprite('cat1.gif', 'Peppe and Aniela together', 'cat-joined'));
       } else {
         if (isGoal) {
-          cell.appendChild(createCatSprite('gif/cat4.gif', 'Aniela waiting', 'cat-goal'));
+          cell.appendChild(createCatSprite('cat4.gif', 'Aniela waiting', 'cat-goal'));
         }
         if (isPlayer) {
-          cell.appendChild(createCatSprite('gif/cat3.gif', 'Peppe moving', 'cat-player'));
+          cell.appendChild(createCatSprite('cat3.gif', 'Peppe moving', 'cat-player'));
         }
       }
 
