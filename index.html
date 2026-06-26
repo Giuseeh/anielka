@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Aniela! 🎀</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- PAGE 1: HEY BABY -->
+  <div class="page" id="page-home">
+    <div class="paper-bg">
+     
+
+      <!-- PEPPE GIF -->
+      <div class="cat-wrap">
+        <img src="cat1.gif" alt="Peppe" class="cat-gif">
+      </div>
+      <h1 class="hey-title">HEY ANIELA!</h1>
+      <p class="hey-sub">WOULD YOU LIKE TO KNOW WHAT I DID FOR YOU?</p>
+      <div class="yesno">
+        <button class="btn-circle btn-no" id="btnNo">✕</button>
+        <button class="btn-circle btn-yes" id="btnYes">✓</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 2: DECLINE -->
+  <div class="page hidden" id="page-decline">
+    <div class="paper-bg">
+      <!-- ANIELA GIF -->
+      <div class="cat-wrap">
+        <img src="cat3.gif" alt="Aniela" class="cat-gif">
+      </div>
+
+      <h1 class="hey-title">AW PLEASE..?</h1>
+      <p class="hey-sub">IG IMA CRY..</p>
+      <button class="btn-circle btn-back" id="btnBack">←</button>
+    </div>
+  </div>
+
+  <!-- PAGE 4: LETTER -->
+  <div class="page hidden" id="page-letter">
+    <div class="paper-bg paper-letter">
+      <!-- CAT GIF small -->
+      <div class="cat-small-wrap">
+        <img src="cat2.gif" alt="cat" class="cat-small-gif">
+      </div>
+
+      <div class="letter-card" id="letterCard">
+        <p class="letter-dear">Dear Aniela,</p>
+        <p class="letter-body">Happy Birthday my love. </p>
+        <p class="letter-body">Even though distance separates us I think of you every day and realize how special you are to me.</p>
+        <p class="letter-body">I love you more than words can say.</p>
+        <p class="letter-sign">With all my love, always </p>
+      </div>
+
+      <button class="btn-back-small" id="btnBackFlowers">← Back</button>
+    </div>
+  </div>
+
+  <!-- CONFETTI -->
+  <div id="confetti" class="confetti hidden"></div>
+
+  <!-- GIFT SELECTION SCREEN -->
+  <div class="page hidden" id="page-gift">
+    <div class="paper-bg">
+      <div class="gift-select-header">
+        <h2 class="gift-title">Choose your surprise</h2>
+        <p class="gift-sub">Nine hidden presents are waiting. Tap one to reveal it.</p>
+      </div>
+      <div class="gift-options" id="giftOptions">
+        <button class="gift-card" data-gift="flowers">
+          <div class="gift-icon">🎁</div>
+          <h3>Surprise 1</h3>
+          <p>Tap to find out!</p>
+        </button>
+        <button class="gift-card" data-gift="message">
+          <div class="gift-icon">🎁</div>
+          <h3>Surprise 2</h3>
+          <p>Tap to find out!</p>
+        </button>
+        <button class="gift-card" data-gift="media">
+          <div class="gift-icon">🎁</div>
+          <h3>Surprise 3</h3>
+          <p>Tap to find out!</p>
+        </button>
+        <button class="gift-card" data-gift="maze">
+          <div class="gift-icon">🎁</div>
+          <h3>Surprise 4</h3>
+          <p>Tap to find out!</p>
+        </button>
+        <button class="gift-card" data-gift="memory">
+          <div class="gift-icon">🎁</div>
+          <h3>Surprise 5</h3>
+          <p>Tap to find out!</p>
+        </button>
+        <button class="gift-card" data-gift="catcher">
+          <div class="gift-icon">🎁</div>
+          <h3>Surprise 6</h3>
+          <p>Tap to find out!</p>
+        </button>
+        <button class="gift-card" data-gift="scratchcard">
+          <div class="gift-icon">🎁</div>
+          <h3>Surprise 7</h3>
+          <p>Tap to find out!</p>
+        </button>
+        <button class="gift-card" data-gift="jigsaw">
+          <div class="gift-icon">🎁</div>
+          <h3>Surprise 8</h3>
+          <p>Tap to find out!</p>
+        </button>
+        <button class="gift-card" data-gift="wordguess">
+          <div class="gift-icon">🎁</div>
+          <h3>Surprise 9</h3>
+          <p>Tap to find out!</p>
+        </button>
+      </div>
+
+      <button class="btn-secondary" id="backToLetter">← Back to letter</button>
+    </div>
+  </div>
+
+  <!-- GIFT CONTENT PAGES -->
+  <div class="page hidden" id="page-gift-flowers">
+    <div class="paper-bg flower-gallery-page">
+      <button class="btn-link" id="flowerBack">← Back to surprises</button>
+      <div class="gallery-hero">
+        <p class="gallery-kicker">A garden just for you</p>
+        <h2 class="gift-title">The Most Beautiful Flowers</h2>
+      </div>
+      <div class="flower-featured" id="flowersFeatured"></div>
+      <div class="flowers-stage" id="flowersStage"></div>
+    </div>
+  </div>
+
+  <div class="page hidden" id="page-gift-message">
+    <div class="paper-bg message-gallery-page">
+      <button class="btn-link" id="messageBack">← Back to surprises</button>
+      <h2 class="gift-title">Love Message</h2>
+      <div class="message-card">
+        <p>I love you so much and I don't think I'll ever be able to fully explain how much you mean to me because every time I try to put it into words it never feels like enough. You are honestly the most important person in my life and every single day I'm grateful that i met you. You have no idea how much happiness you've brought into my life and how much you've changed things for the better. Before I met you, I never thought someone could make me feel this comfortable, this understood, and this genuinely happy just by being themselves. You have such a beautiful heart and that's one of the many reasons why I care about you so much.</p>
+        <p>I love talking to you because no matter what kind of day I'm having you somehow make everything better and if I'm sad you make me smile if I'm stressed you calm me down. If I'm overthinking you remind me that everything is going to be okay. Just seeing your name pop up on my screen can instantly make my day better. You don't even realize how much your presence means to me. Sometimes I catch myself smiling while reading our old messages because they remind me of how lucky I am to have you in my life.</p>
+        <p>I want you to know that I appreciate every little thing about you. I appreciate the way you listen. i love appreciate your kindness, your patience, your personality, your voice and even all the small things that you probably don't think matter but mean everything to me. The little things are what make you special.</p>
+        <p>I know nobody is perfect, and honestly I don't expect perfection from you because perfection isn't what makes someone lovable you don't have to be perfect, i know that you don't trust me but if u stay by my side i'll take care of you until my last breath.</p>
+        <p>I don't care about your flaws or your insecurities. Those things don't change how much I care about you.</p>
+        <p>I want to be someone you can always count on i want to be there when you're happy and when you're sad. I want to celebrate good things with you and help you through your struggles. I want to listen when you need someone to talk to and stay by your side when life gets difficult. No matter what happens, I want you to know that you'll never have to face everything alone because I'll always care about you and I'll always do my best to support you.</p>
+        <p>Sometimes I sit and think about how much you've impacted my life and it honestly amazes me.</p>
+        <p>You showed me what it feels like to genuinely care about someone and to look forward to talking to them every day. You became such an important part of my life that now my days feel incomplete without you.</p>
+        <p>I hate when i can't talk to you or when i can't ehar your voice.</p>
+        <p>You're one of the first people I think about when I wake up and one of the last people I think about before I fall asleep.</p>
+        <p>I don't know what i would do without you i don't like anyone irl they're all so fake and annoying i wish i could be there with you that's all i need.</p>
+        <p>I love the memories we've made together and I can't wait to make even more. I want to laugh with you spend time with you stay up late talking to you share random stories with you and create moments that we'll remember forever.</p>
+        <p>It doesn't matter what we're doing because somehow you make every moment feel special.</p>
+        <p>I hope you never forget how important you are. I hope you never forget how much you mean to me.</p>
+        <p>Thank you for every conversation we've had Thank you for every laugh we've shared</p>
+        <p>Thank you for every time you've listened to me, supported me,encouraged me, or simply been there for me. Thank you for being patient with me even tho i'm an asshole sometimes and for accepting me for who i am. Thank you for all the memories and all the happiness you've brought into my life.</p>
+        <p>I'm sorry if i'm not handsome,funny and i'm annoying sometimes i know i'm can be an asshole sometimes but i really love you and i wish we can be together for the rest of my our lives and i'm serious about it.</p>
+        <p>I'm sorry if my gift isn't something good for now i'm sorry my baby i wish i could give you the world.</p>
+        <p>I promise I'll always try my best to make you smile. You've given me so many reasons to smile and so many reasons to be happy.</p>
+        <p>i care about you more than words can explain and no amount of words will ever be enough to describe how much i love you. Thank you for being you, thank you for staying, and thank you for making my life brighter every single day. I love you so much, and I always will ml.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page hidden" id="page-gift-media">
+    <div class="paper-bg" style="padding: 36px 28px 48px;">
+      <button class="btn-link" id="mediaBack">← Back to surprises</button>
+      <h2 class="gift-title" style="margin-top:10px;">Our little memory gallery</h2>
+      <p class="gift-sub">Moments we shared</p>
+      <div class="media-gallery" id="mediaGallery"></div>
+    </div>
+  </div>
+
+  <div class="page hidden" id="page-gift-memory">
+    <div class="paper-bg">
+      <button class="btn-link" id="memoryBack">← Back to surprises</button>
+      <h2 class="gift-title">Memory Match</h2>
+      <p class="gift-sub">Match the pairs of cards to uncover the loving pattern.</p>
+      <div class="game-screen">
+        <div class="game-container">
+          <div class="game-nav">Tap any card to begin the game.</div>
+          <div class="memory-grid" id="memoryBoard"></div>
+          <div class="maze-status" id="memoryStatus">Ready to play!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page hidden" id="page-gift-maze">
+    <div class="paper-bg maze-gallery-page">
+      <button class="btn-link" id="mazeBack">← Back to surprises</button>
+      <p class="gallery-kicker">A winding challenge</p>
+      <h2 class="gift-title">Peppe & Aniela Labyrinth</h2>
+      <p class="gift-sub">Use WASD or the buttons to guide Peppe through a winding maze. Can you reach Aniela?</p>
+      <div class="maze-wrapper">
+        <div class="maze-instructions">Use keyboard WASD to move Peppe through the maze.</div>
+        <div class="maze-board" id="mazeBoard" aria-label="Peppe and Aniela maze"></div>
+        <div class="maze-status" id="mazeStatus">Find Aniela!</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEART CATCHER SCREEN -->
+  <div class="page hidden" id="page-gift-catcher">
+    <div class="paper-bg">
+      <button class="btn-link" id="catcherBack">← Back to surprises</button>
+      <h2 class="gift-title">Heart Catcher</h2>
+      <p class="gift-sub">Catch falling hearts and stars! Avoid rain clouds. (Goal: 15 points)</p>
+      <div class="game-screen">
+        <div class="game-container">
+          <div class="catcher-hud">
+            <div class="hud-score">Score: <span id="catcherScore">0</span>/15</div>
+            <div class="hud-lives">Lives: <span id="catcherLives">❤❤❤</span></div>
+          </div>
+          <div class="canvas-wrapper">
+            <canvas id="catcherCanvas" width="360" height="400"></canvas>
+          </div>
+          <div class="catcher-controls">
+            <button class="control-btn" id="catcherLeftBtn">◀ Left</button>
+            <button class="control-btn" id="catcherRightBtn">Right ▶</button>
+          </div>
+          <div class="maze-status" id="catcherStatus">Use Arrow keys, A/D, or the buttons above to move Peppe!</div>
+          <button class="btn-primary hidden" id="catcherReset">Play Again</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRATCH CARD SCREEN -->
+  <div class="page hidden" id="page-gift-scratchcard">
+    <div class="paper-bg">
+      <button class="btn-link" id="scratchcardBack">← Back to surprises</button>
+      <h2 class="gift-title">Love Scratch Card</h2>
+      <p class="gift-sub">Use your mouse or finger to scratch off the silver coating and reveal your custom ticket!</p>
+      <div class="scratch-card-wrapper">
+        <div class="scratch-card-container">
+          <!-- Beneath layer (Love Coupon) -->
+          <div class="scratch-card-coupon" id="scratchCoupon">
+            <div class="coupon-border">
+              <div class="coupon-header">ROMANTIC COUPON</div>
+              <div class="coupon-title">This Ticket Entitles Aniela To:</div>
+              <div class="coupon-value">10,000 Kisses</div>
+              <div class="coupon-note">Valid forever. Redeemable at any time with Peppe. ❤️</div>
+            </div>
+          </div>
+          <!-- Above layer (Scratchable canvas) -->
+          <canvas id="scratchCanvas" width="320" height="200"></canvas>
+        </div>
+      </div>
+      <div class="maze-status" id="scratchStatus">Scratch to reveal your gift! (0% scratched)</div>
+    </div>
+  </div>
+
+  <!-- JIGSAW PUZZLE SCREEN -->
+  <div class="page hidden" id="page-gift-jigsaw">
+    <div class="paper-bg">
+      <button class="btn-link" id="jigsawBack">← Back to surprises</button>
+      <h2 class="gift-title">Love Jigsaw Puzzle</h2>
+      <p class="gift-sub">Click two tiles to swap their positions. Reconstruct the cute picture of Peppe & Aniela!</p>
+      <div class="game-screen">
+        <div class="game-container">
+          <div class="jigsaw-board" id="jigsawBoard"></div>
+          <div class="maze-status" id="jigsawStatus">Click tiles to swap.</div>
+          <button class="btn-primary" id="jigsawReset">Shuffle Grid</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORD GUESS GAME SCREEN -->
+  <div class="page hidden" id="page-gift-wordguess">
+    <div class="paper-bg">
+      <button class="btn-link" id="wordguessBack">← Back to surprises</button>
+      <h2 class="gift-title">Love Words</h2>
+      <p class="gift-sub">Guess the hidden love word or phrase — one letter at a time. 6 hearts allowed. 💌</p>
+      <div class="game-screen">
+        <div class="game-container">
+          <div class="wg-lives" id="wgLives"></div>
+          <div class="wg-hint" id="wgHint"></div>
+          <div class="wordguess-display" id="wgDisplay"></div>
+          <div class="wg-keyboard" id="wgKeyboard"></div>
+          <div class="maze-status" id="wgStatus">Tap a letter to start!</div>
+          <button class="btn-primary hidden" id="wgNext">Next Word ✨</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOVE SPIN SCREEN -->
+  <div class="page hidden" id="page-gift-lovespin">
+    <div class="paper-bg">
+      <button class="btn-link" id="lovespinBack">← Back to surprises</button>
+      <h2 class="gift-title">Love Spin 💫</h2>
+      <p class="gift-sub">Spin the wheel and get a little something from Peppe. Every spin is for you. 🌹</p>
+      <div class="game-screen">
+        <div class="game-container" style="gap:20px;">
+          <div class="lovespin-wheel-wrap">
+            <canvas id="loveSpinCanvas" width="300" height="300"></canvas>
+            <div class="lovespin-needle">▼</div>
+          </div>
+          <button class="btn-primary" id="loveSpinBtn">Spin! 🌀</button>
+          <div class="lovespin-result hidden" id="loveSpinResult">
+            <div class="lovespin-emoji" id="loveSpinEmoji"></div>
+            <div class="lovespin-message" id="loveSpinMessage"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
